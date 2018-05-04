@@ -1,4 +1,7 @@
 *.swp
 *.un~
+*~
 .netrwhist
 pack/minpac
+gvimrc
+vimrc

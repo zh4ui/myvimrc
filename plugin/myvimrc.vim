@@ -4,6 +4,9 @@ if exists('g:zh4ui_myvimrc')
 endif
 let g:zh4ui_myvimrc = 1
 
+set noundofile
+set nobackup
+
 " shortcuts
 nnoremap <silent> <C-J> gT
 nnoremap <silent> <C-K> gt
