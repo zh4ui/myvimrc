@@ -1,0 +1,4 @@
+*.swp
+*.un~
+.netrwhist
+pack/minpac
