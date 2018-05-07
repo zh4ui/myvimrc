@@ -22,10 +22,4 @@ call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
 
 colorscheme office-light
 
-
-try
-  source 'site.vim'
-catch /E484/
-endtry
-
 " vim: ts=2 sw=2 expandtab
