@@ -19,6 +19,7 @@ call minpac#add('nightsense/office')
 call minpac#add('zh4ui/myvimrc')
 call minpac#add('jlanzarotta/bufexplorer')
 call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
+call minpac#add('reedes/vim-pencil', {'type': 'opt'})
 
 colorscheme office-light
 
