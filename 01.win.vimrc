@@ -9,7 +9,7 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 call minpac#add('tpope/vim-fugitive')
-call minpac#add('vim-airline/vim-airline')
+call minpac#add('itchyny/lightline.vim')
 
 "
 " add the office colorscheme, you can find more colorschemes at
@@ -20,7 +20,10 @@ call minpac#add('zh4ui/myvimrc')
 call minpac#add('jlanzarotta/bufexplorer')
 call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})
+call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
 
 colorscheme office-light
+
+set laststatus=2
 
 " vim: ts=2 sw=2 expandtab
