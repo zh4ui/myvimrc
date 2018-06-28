@@ -24,6 +24,16 @@ call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
 
 colorscheme office-light
 
-set laststatus=2
+" TODO:: check if it's on a fold
+nnoremap <CR> zo
+nnoremap - zc
 
+" for lightline
+set laststatus=2
+set noshowmode
+
+
+augroup filetypedetect
+  au! BufNewFile,BufRead *.sig set filetype=c fdm=syntax
+augroup END
 " vim: ts=2 sw=2 expandtab
