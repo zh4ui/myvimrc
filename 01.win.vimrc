@@ -28,10 +28,6 @@ colorscheme office-light
 nnoremap <CR> zo
 nnoremap - zc
 
-" for lightline
-set laststatus=2
-set noshowmode
-
 
 augroup filetypedetect
   au! BufNewFile,BufRead *.sig set filetype=c fdm=syntax
