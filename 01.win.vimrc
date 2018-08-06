@@ -32,4 +32,6 @@ nnoremap - zc
 augroup filetypedetect
   au! BufNewFile,BufRead *.sig set filetype=c fdm=syntax
 augroup END
+
+set linebreak
 " vim: ts=2 sw=2 expandtab
