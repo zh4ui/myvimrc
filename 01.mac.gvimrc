@@ -9,4 +9,4 @@ set noimd
 set imi=2
 set ims=2
 
-colo base16-tomorrow
+" colo base16-tomorrow

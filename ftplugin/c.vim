@@ -12,4 +12,11 @@ iabbr p2: private:
 iabbr uns; using namespace std;
 
 setlocal matchpairs+=<:>
-setlocal expandtab sw=2 tw=2
+setlocal expandtab sw=2 ts=2
+
+set cino+=g0
+set cino+=N-s
+set cino+=E-s
+set cino+=(0
+
+set nowrap
