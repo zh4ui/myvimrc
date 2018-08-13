@@ -21,6 +21,7 @@ call minpac#add('cespare/vim-toml')
 " http://vimcolors.com/
 call minpac#add('nightsense/office')
 call minpac#add('itchyny/lightline.vim')
+call minpac#add('rking/ag.vim')
 
 call minpac#add('jlanzarotta/bufexplorer')
 call minpac#add('chriskempson/base16-vim')
@@ -31,6 +32,8 @@ call minpac#add('fatih/vim-go')
 call minpac#add('reedes/vim-pencil')
 call minpac#add('zh4ui/vim-rfc-reader')
 call minpac#add('vimwiki/vimwiki')
+call minpac#add('octol/vim-cpp-enhanced-highlight')
+
 
 call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
 call minpac#add('vim-scripts/DrawIt', {'type': 'opt'})
@@ -40,5 +43,9 @@ if has("gui_running")
 	colorscheme office-light
 	set signcolumn=yes
 endif
+
+let g:lightline = {
+      \ 'colorscheme': 'Tomorrow',
+      \ }
 
 " vim: ts=2 sw=2 expandtab ft=vim
