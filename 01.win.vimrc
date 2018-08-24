@@ -10,6 +10,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('itchyny/lightline.vim')
+call minpac#add('kergoth/vim-bitbake')
 
 "
 " add the office colorscheme, you can find more colorschemes at
