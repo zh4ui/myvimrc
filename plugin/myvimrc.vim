@@ -45,3 +45,7 @@ nnoremap <leader>sab <esc>:%s/<c-r>a/<c-r>b/gc
 set laststatus=2
 set noshowmode
 
+" https://stackoverflow.com/questions/32154285/folding-expanding-and-colapsing-xml-tags-in-vim-xml-parsing
+" http://vim.wikia.com/wiki/Vim_as_XML_Editor
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
