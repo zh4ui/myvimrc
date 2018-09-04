@@ -16,6 +16,8 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('cespare/vim-toml')
+call minpac#add('keith/swift.vim')
+
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
