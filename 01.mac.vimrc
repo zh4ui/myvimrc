@@ -24,6 +24,7 @@ call minpac#add('keith/swift.vim')
 call minpac#add('nightsense/office')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
+call minpac#add('pangloss/vim-javascript')
 
 call minpac#add('jlanzarotta/bufexplorer')
 call minpac#add('chriskempson/base16-vim')
