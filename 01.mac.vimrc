@@ -28,7 +28,6 @@ call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
 call minpac#add('pangloss/vim-javascript')
 
-call minpac#add('vim-scripts/bufexplorer.zip')
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('junegunn/goyo.vim')
 call minpac#add('leafgarland/typescript-vim')
