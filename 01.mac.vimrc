@@ -17,9 +17,9 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('cespare/vim-toml')
 call minpac#add('keith/swift.vim')
-call minpac#add('inkarkat/vim-mark')
-call minpac#add('inkarkat/vim-ingo-library')
-
+call minpac#add('vim-scripts/L9')
+call minpac#add('vim-scripts/FuzzyFinder')
+call minpac#add('jlanzarotta/bufexplorer')
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
@@ -35,12 +35,12 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('fatih/vim-go')
 call minpac#add('reedes/vim-pencil')
 call minpac#add('zh4ui/vim-rfc-reader')
-call minpac#add('vimwiki/vimwiki')
 call minpac#add('octol/vim-cpp-enhanced-highlight')
 
 
-call minpac#add('jlanzarotta/bufexplorer', {'type': 'opt'})
-call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
+call minpac#add('inkarkat/vim-mark', {'type': 'opt'})
+call minpac#add('inkarkat/vim-ingo-library', {'type': 'opt'})
+call minpac#add('vimwiki/vimwiki', {'type': 'opt'})
 call minpac#add('vim-scripts/DrawIt', {'type': 'opt'})
 call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
 
@@ -52,5 +52,7 @@ endif
 let g:lightline = {
       \ 'colorscheme': 'Tomorrow',
       \ }
+
+nnoremap <silent> sj     :FufBuffer<CR>
 
 " vim: ts=2 sw=2 expandtab ft=vim
