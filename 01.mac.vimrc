@@ -21,7 +21,6 @@ call minpac#add('inkarkat/vim-mark')
 call minpac#add('inkarkat/vim-ingo-library')
 
 
-
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
 call minpac#add('nightsense/office')
@@ -29,7 +28,7 @@ call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
 call minpac#add('pangloss/vim-javascript')
 
-call minpac#add('jlanzarotta/bufexplorer')
+call minpac#add('vim-scripts/bufexplorer.zip')
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('junegunn/goyo.vim')
 call minpac#add('leafgarland/typescript-vim')
@@ -41,6 +40,7 @@ call minpac#add('vimwiki/vimwiki')
 call minpac#add('octol/vim-cpp-enhanced-highlight')
 
 
+call minpac#add('jlanzarotta/bufexplorer', {'type': 'opt'})
 call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
 call minpac#add('vim-scripts/DrawIt', {'type': 'opt'})
 call minpac#add('vim-airline/vim-airline', {'type': 'opt'})

@@ -41,6 +41,8 @@ nnoremap <leader>s0 <esc>:%s/<c-r>"/
 nnoremap <leader>s1 <esc>:%s/<c-r>"/<c-r>"
 nnoremap <leader>sab <esc>:%s/<c-r>a/<c-r>b/gc
 
+nnoremap <leader>fds <esc>: setlocal fdm=syntax<cr>
+
 " for lightline
 set laststatus=2
 set noshowmode
