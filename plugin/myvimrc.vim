@@ -4,6 +4,8 @@ if exists('g:zh4ui_myvimrc')
 endif
 let g:zh4ui_myvimrc = 1
 
+set encoding=utf-8
+
 set noundofile
 set nobackup
 
