@@ -16,10 +16,10 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('cespare/vim-toml')
-call minpac#add('keith/swift.vim')
 call minpac#add('vim-scripts/L9')
 call minpac#add('vim-scripts/FuzzyFinder')
-call minpac#add('jlanzarotta/bufexplorer')
+call minpac#add('rhysd/vim-clang-format')
+
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
@@ -31,13 +31,14 @@ call minpac#add('pangloss/vim-javascript')
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('junegunn/goyo.vim')
 call minpac#add('leafgarland/typescript-vim')
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('fatih/vim-go')
 call minpac#add('reedes/vim-pencil')
 call minpac#add('zh4ui/vim-rfc-reader')
 call minpac#add('octol/vim-cpp-enhanced-highlight')
 
 
+call minpac#add('keith/swift.vim', {'type': 'opt'})
+call minpac#add('fatih/vim-go', {'type': 'opt'})
+call minpac#add('jlanzarotta/bufexplorer', {'type': 'opt'})
 call minpac#add('inkarkat/vim-mark', {'type': 'opt'})
 call minpac#add('inkarkat/vim-ingo-library', {'type': 'opt'})
 call minpac#add('vimwiki/vimwiki', {'type': 'opt'})
