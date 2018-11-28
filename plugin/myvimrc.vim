@@ -37,13 +37,12 @@ nnoremap <silent> <leader>np :setl nopaste<CR>
 nnoremap <silent> <leader>sp :setl paste<CR>
 
 nnoremap <silent> <C-N> :silent noh<CR>
-inoremap <silent> <S-ENTER> <ESC>O
 
 nnoremap <leader>s0 <esc>:%s/<c-r>"/
 nnoremap <leader>s1 <esc>:%s/<c-r>"/<c-r>"
 nnoremap <leader>sab <esc>:%s/<c-r>a/<c-r>b/gc
 
-nnoremap <leader>fds <esc>: setlocal fdm=syntax<cr>
+nnoremap <leader>fs <esc>: setlocal fdm=syntax<cr>
 
 " for lightline
 set laststatus=2

@@ -27,12 +27,12 @@ call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
 
 call minpac#add('chriskempson/base16-vim')
-call minpac#add('junegunn/goyo.vim')
 call minpac#add('reedes/vim-pencil')
-call minpac#add('zh4ui/vim-rfc-reader')
-call minpac#add('octol/vim-cpp-enhanced-highlight')
 
 
+call minpac#add('junegunn/goyo.vim', {'type': 'opt'})
+call minpac#add('zh4ui/vim-rfc-reader', {'type': 'opt'})
+call minpac#add('octol/vim-cpp-enhanced-highlight', {'type': 'opt'})
 call minpac#add('cespare/vim-toml', {'type': 'opt'})
 call minpac#add('pangloss/vim-javascript', {'type': 'opt'})
 call minpac#add('leafgarland/typescript-vim', {'type': 'opt'})
