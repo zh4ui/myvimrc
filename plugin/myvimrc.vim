@@ -44,6 +44,13 @@ nnoremap <leader>sab <esc>:%s/<c-r>a/<c-r>b/gc
 
 nnoremap <leader>fs <esc>: setlocal fdm=syntax<cr>
 
+" abbreviations
+
+cabbr th tab h
+cabbr te tabe
+cabbr t. tabe .
+cabbr t.. tabe ..
+
 " for lightline
 set laststatus=2
 set noshowmode
@@ -52,3 +59,4 @@ set noshowmode
 " http://vim.wikia.com/wiki/Vim_as_XML_Editor
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax foldopen-=block
+
