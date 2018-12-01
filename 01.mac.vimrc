@@ -8,6 +8,7 @@ set clipboard=unnamed
 " minpac configurations 
 
 packadd minpac
+packadd netrw
 
 call minpac#init()
 
@@ -20,7 +21,6 @@ call minpac#add('vim-scripts/FuzzyFinder')
 call minpac#add('rhysd/vim-clang-format')
 call minpac#add('octol/vim-cpp-enhanced-highlight')
 call minpac#add('jlanzarotta/bufexplorer')
-call minpac#add('eiginn/netrw')
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
@@ -31,7 +31,7 @@ call minpac#add('rking/ag.vim')
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('reedes/vim-pencil')
 
-
+call minpac#add('zh4ui/netrw', {'type': 'opt'})
 call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
 call minpac#add('derekwyatt/vim-fswitch', {'type': 'opt'})
 call minpac#add('junegunn/goyo.vim', {'type': 'opt'})

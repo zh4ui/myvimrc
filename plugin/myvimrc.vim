@@ -48,8 +48,8 @@ nnoremap <leader>fs <esc>: setlocal fdm=syntax<cr>
 
 cabbr th tab h
 cabbr te tabe
-cabbr t. tabe .
-cabbr t.. tabe ..
+cabbr t. Texplore
+cabbr t.. Texplore ..
 
 " for lightline
 set laststatus=2
