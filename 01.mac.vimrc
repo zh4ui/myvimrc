@@ -1,6 +1,11 @@
 
 runtime vimrc_example.vim
 
+let s:extra_config = join([expand('<sfile>:p:h'), 'extra.vim'], '/')
+if filereadable(s:extra_config)
+  exec "source " . s:extra_config
+endif
+
 set belloff=all
 set clipboard=unnamed
 " set linebreak
@@ -30,6 +35,8 @@ call minpac#add('rking/ag.vim')
 
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('reedes/vim-pencil')
+call minpac#add('embear/vim-localvimrc')
+
 
 call minpac#add('zh4ui/netrw', {'type': 'opt'})
 call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
@@ -56,16 +63,8 @@ let g:lightline = {
       \ 'colorscheme': 'Tomorrow',
       \ }
 
-nnoremap <silent> sj     :FufBuffer<CR>
-
-" plugin clang-format
-let g:clang_format#code_style='file'
-" map to <Leader>cf in C++ code
-autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-" if you install vim-operator-user
-autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
-" Toggle auto formatting:
-nmap <Leader>C :ClangFormatAutoToggle<CR>
+" plugin vim-localvimrc
+let g:localvimrc_reverse = 1
+let g:localvimrc_whitelist = expand('$HOME/.vim/lvimrc')
 
 " vim: ts=2 sw=2 expandtab ft=vim
