@@ -58,5 +58,6 @@ nnoremap <silent> sh     :FufHelp<CR>
 nnoremap <silent> se     :FufEditDataFile<CR>
 nnoremap <silent> sr     :FufRenewCache<CR>
 
+nnoremap <silent> <C-P>	:FufCoverageFile<CR>
 "
 "
