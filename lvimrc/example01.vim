@@ -12,7 +12,7 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 " fuf
-let g:fuf_coveragefile_globPatterns = ['src/**/*', 'api/**/*',  'test/**/*']
+let g:fuf_coveragefile_globPatterns = ['src/**/*', 'api/**/*',  'test/**/*', 'docs/**/*']
 
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 400
@@ -59,5 +59,6 @@ nnoremap <silent> se     :FufEditDataFile<CR>
 nnoremap <silent> sr     :FufRenewCache<CR>
 
 nnoremap <silent> <C-P>	:FufCoverageFile<CR>
+nnoremap <silent> <C-H> :exec 'FufCoverageFile ' . expand('%:t:r')<CR>
 "
 "

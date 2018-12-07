@@ -13,7 +13,6 @@ set clipboard=unnamed
 " minpac configurations 
 
 packadd minpac
-packadd netrw
 
 call minpac#init()
 
