@@ -25,6 +25,8 @@ call minpac#add('vim-scripts/FuzzyFinder')
 call minpac#add('rhysd/vim-clang-format')
 call minpac#add('octol/vim-cpp-enhanced-highlight')
 call minpac#add('jlanzarotta/bufexplorer')
+call minpac#add('prabirshrestha/async.vim')
+call minpac#add('prabirshrestha/vim-lsp')
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
@@ -37,6 +39,7 @@ call minpac#add('reedes/vim-pencil')
 call minpac#add('embear/vim-localvimrc')
 
 
+call minpac#add('hukeyue/vim-clangd', {'type': 'opt'})
 call minpac#add('zh4ui/netrw', {'type': 'opt'})
 call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
 call minpac#add('derekwyatt/vim-fswitch', {'type': 'opt'})
@@ -65,5 +68,7 @@ let g:lightline = {
 " plugin vim-localvimrc
 let g:localvimrc_reverse = 1
 let g:localvimrc_whitelist = expand('$HOME/.vim/lvimrc')
+
+" let g:clangd#clangd_executable = expand('$HOME/.local/bin/clangd')
 
 " vim: ts=2 sw=2 expandtab ft=vim
