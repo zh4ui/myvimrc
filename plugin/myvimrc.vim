@@ -60,3 +60,6 @@ set noshowmode
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax foldopen-=block
 
+" https://stackoverflow.com/questions/178257/how-to-avoid-syntax-highlighting-for-large-files-in-vim
+autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
+

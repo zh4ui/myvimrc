@@ -13,6 +13,7 @@ set clipboard=unnamed
 " minpac configurations 
 
 packadd minpac
+packadd typescript-vim
 
 call minpac#init()
 
