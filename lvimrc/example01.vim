@@ -12,7 +12,7 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 " fuf
-let g:fuf_coveragefile_globPatterns = ['src/**/*', 'api/**/*',  'test/**/*', 'docs/**/*']
+let g:fuf_coveragefile_globPatterns = ['src/**/*', 'include/**/*',  'test/**/*', 'docs/**/*']
 
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 400
@@ -61,15 +61,18 @@ nnoremap <silent> sr     :FufRenewCache<CR>
 nnoremap <silent> <C-P>	:FufCoverageFile<CR>
 nnoremap <silent> <C-H> :exec 'FufCoverageFile ' . expand('%:t:r')<CR>
 
+noremap <leader>cr :py3f ~/.vim/clang/clang-rename.py<cr>
+
+set autoread
 
 " https://github.com/MaskRay/ccls/wiki/vim-lsp
 " Register ccls C++ lanuage server.
-"      \ 'initialization_options': { 'cacheDirectory': '/tmp/ccls/cache' },
 if executable('ccls')
    au User lsp_setup call lsp#register_server({
       \ 'name': 'ccls',
       \ 'cmd': {server_info->['ccls']},
       \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+      \ 'initialization_options': { 'cacheDirectory': '/tmp/ccls/cache' },
       \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
       \ })
 endif

@@ -13,7 +13,6 @@ set clipboard=unnamed
 " minpac configurations 
 
 packadd minpac
-packadd typescript-vim
 
 call minpac#init()
 
@@ -40,7 +39,8 @@ call minpac#add('reedes/vim-pencil')
 call minpac#add('embear/vim-localvimrc')
 
 
-call minpac#add('hukeyue/vim-clangd', {'type': 'opt'})
+call minpac#add('uplus/vim-clang-rename', {'type': 'opt'})
+" call minpac#add('hukeyue/vim-clangd', {'type': 'opt'})
 call minpac#add('zh4ui/netrw', {'type': 'opt'})
 call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
 call minpac#add('derekwyatt/vim-fswitch', {'type': 'opt'})
