@@ -100,4 +100,6 @@ nn <f2> :LspRename<cr>
 nn <silent> <M-a> :LspWorkspaceSymbol<cr>
 nn <silent> <M-l> :LspDocumentSymbol<cr>
 
+autocmd FileType sql syn keyword sqlType	text
+
 " vim: ts=2 sw=2 expandtab
