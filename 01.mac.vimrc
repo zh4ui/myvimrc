@@ -30,12 +30,13 @@ call minpac#add('prabirshrestha/vim-lsp')
 call minpac#add('ajh17/VimCompletesMe')
 call minpac#add('Konfekt/FastFold')
 call minpac#add('embear/vim-localvimrc')
+call minpac#add('terryma/vim-multiple-cursors')
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('rking/ag.vim')
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
 call minpac#add('nightsense/office')
-call minpac#add('itchyny/lightline.vim')
-call minpac#add('rking/ag.vim')
 
 
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})
