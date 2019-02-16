@@ -6,6 +6,9 @@ if filereadable(s:extra_config)
   exec "source " . s:extra_config
 endif
 
+" allow cursor to pass the last character
+set virtualedit=onemore
+
 set belloff=all
 set clipboard=unnamed
 " set linebreak
@@ -30,7 +33,6 @@ call minpac#add('prabirshrestha/vim-lsp')
 call minpac#add('ajh17/VimCompletesMe')
 call minpac#add('Konfekt/FastFold')
 call minpac#add('embear/vim-localvimrc')
-call minpac#add('terryma/vim-multiple-cursors')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
 
@@ -38,7 +40,7 @@ call minpac#add('rking/ag.vim')
 " http://vimcolors.com/
 call minpac#add('nightsense/office')
 
-
+call minpac#add('terryma/vim-multiple-cursors', {'type': 'opt'})
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})
 call minpac#add('uplus/vim-clang-rename', {'type': 'opt'})
 call minpac#add('chriskempson/base16-vim', {'type': 'opt'})
