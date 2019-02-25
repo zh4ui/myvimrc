@@ -104,12 +104,12 @@ autocmd FileType sql syn keyword sqlType	text
 
 
 " https://github.com/Konfekt/FastFold
-nmap zuz <Plug>(FastFoldUpdate)
-let g:fastfold_savehook = 1
-let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
-let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+" nmap zuz <Plug>(FastFoldUpdate)
+" let g:fastfold_savehook = 1
+" let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+" let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
-
-set foldlevel=1
+" https://stackoverflow.com/questions/5074191/vim-fold-top-level-folds-only
+set foldnestmax=1
 
 " vim: ts=2 sw=2 expandtab

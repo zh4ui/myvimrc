@@ -16,6 +16,7 @@ set clipboard=unnamed
 " minpac configurations 
 
 packadd minpac
+packadd vim-go
 
 call minpac#init()
 
@@ -31,7 +32,6 @@ call minpac#add('jlanzarotta/bufexplorer')
 call minpac#add('prabirshrestha/async.vim')
 call minpac#add('prabirshrestha/vim-lsp')
 call minpac#add('ajh17/VimCompletesMe')
-call minpac#add('Konfekt/FastFold')
 call minpac#add('embear/vim-localvimrc')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
@@ -40,6 +40,7 @@ call minpac#add('rking/ag.vim')
 " http://vimcolors.com/
 call minpac#add('nightsense/office')
 
+call minpac#add('Konfekt/FastFold', {'type': 'opt'})
 call minpac#add('terryma/vim-multiple-cursors', {'type': 'opt'})
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})
 call minpac#add('uplus/vim-clang-rename', {'type': 'opt'})
