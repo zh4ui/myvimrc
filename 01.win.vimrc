@@ -24,6 +24,8 @@ call minpac#add('jlanzarotta/bufexplorer')
 call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})
 call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
+call minpac#add('PProvost/vim-ps1', {'type': 'opt'})
+call minpac#add('Shougo/vimshell.vim', {'type': 'opt'})
 
 " colorscheme office-light
 
