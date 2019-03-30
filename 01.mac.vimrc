@@ -35,6 +35,7 @@ call minpac#add('ajh17/VimCompletesMe')
 call minpac#add('embear/vim-localvimrc')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
+call minpac#add('zchee/vim-flatbuffers')
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/

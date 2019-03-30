@@ -12,7 +12,7 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 " fuf
-let g:fuf_coveragefile_globPatterns = ['src/**/*', 'include/**/*',  'test/**/*', 'docs/**/*']
+let g:fuf_coveragefile_globPatterns = ['src/**/*', 'include/**/*',  'test/**/*', 'docs/**/*', 'muggle/**/*']
 
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 400
@@ -81,6 +81,9 @@ if executable('clangd')
   augroup end
 endif
 
+let g:lsp_diagnostics_enabled = 0
+let g:lsp_signs_enabled = 0
+
 " https://github.com/MaskRay/ccls/wiki/vim-lsp
 " Register ccls C++ lanuage server.
 " if executable('ccls')
@@ -104,10 +107,10 @@ autocmd FileType sql syn keyword sqlType	text
 
 
 " https://github.com/Konfekt/FastFold
-" nmap zuz <Plug>(FastFoldUpdate)
-" let g:fastfold_savehook = 1
-" let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
-" let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+nmap zuz <Plug>(FastFoldUpdate)
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
 " https://stackoverflow.com/questions/5074191/vim-fold-top-level-folds-only
 set foldnestmax=1
