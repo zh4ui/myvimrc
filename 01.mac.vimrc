@@ -16,8 +16,6 @@ set clipboard=unnamed
 " minpac configurations 
 
 packadd minpac
-packadd vim-go
-"packadd ale
 
 call minpac#init()
 
@@ -36,11 +34,14 @@ call minpac#add('ajh17/VimCompletesMe')
 call minpac#add('embear/vim-localvimrc')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('rking/ag.vim')
-call minpac#add('zchee/vim-flatbuffers')
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
 call minpac#add('nightsense/office', {'type': 'opt'})
+
+call minpac#add('zchee/vim-flatbuffers', {'type': 'opt'})
+call minpac#add('tpope/vim-dispatch', {'type': 'opt'})
+call minpac#add('skywind3000/asyncrun.vim', {'type': 'opt'})
 call minpac#add('Konfekt/FastFold', {'type': 'opt'})
 call minpac#add('terryma/vim-multiple-cursors', {'type': 'opt'})
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})

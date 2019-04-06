@@ -106,6 +106,18 @@ nn <silent> <M-l> :LspDocumentSymbol<cr>
 autocmd FileType sql syn keyword sqlType	text
 
 
+packadd asyncrun.vim
+" automatically open quickfix window when AsyncRun command is executed
+" set the quickfix window 6 lines height.
+let g:asyncrun_open = 6
+
+" ring the bell to notify you job finished
+let g:asyncrun_bell = 1
+
+" F10 to toggle quickfix window
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+
+
 " https://github.com/Konfekt/FastFold
 nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_savehook = 1
@@ -114,5 +126,28 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
 " https://stackoverflow.com/questions/5074191/vim-fold-top-level-folds-only
 set foldnestmax=2
+
+
+" make the current file to object
+nn \b0 :exec 'make -C ./build ' . expand('%:.:r') . '.o'<cr>
+
+packadd vim-flatbuffers
+
+function! QfFixNamingError()
+  let cursor = getqflist({'idx': 0}).idx - 1
+  let qflist = getqflist()
+  let errmsg =  qflist[cursor].text
+  let matchresult =  matchlist(errmsg, '.*''\(\w\+\)''.*; did you mean ''\(\w\+\)''?')
+  if len(matchresult) > 0
+    let wrong = matchresult[1]
+    let right = matchresult[2]
+    let lnum = qflist[cursor].lnum
+    let text = getline(lnum)
+    let newtext =  substitute(text, wrong, right, 'g')
+    call setline(lnum, newtext)
+  endif
+endfunction
+
+nn \fn :call QfFixNamingError()<cr>
 
 " vim: ts=2 sw=2 expandtab
