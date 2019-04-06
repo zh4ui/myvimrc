@@ -7,7 +7,7 @@ if filereadable(s:extra_config)
 endif
 
 " allow cursor to pass the last character
-set virtualedit=onemore
+"set virtualedit=onemore
 
 set belloff=all
 set clipboard=unnamed
@@ -17,6 +17,7 @@ set clipboard=unnamed
 
 packadd minpac
 packadd vim-go
+"packadd ale
 
 call minpac#init()
 
@@ -39,8 +40,7 @@ call minpac#add('zchee/vim-flatbuffers')
 
 " add the office colorscheme, you can find more colorschemes at
 " http://vimcolors.com/
-call minpac#add('nightsense/office')
-
+call minpac#add('nightsense/office', {'type': 'opt'})
 call minpac#add('Konfekt/FastFold', {'type': 'opt'})
 call minpac#add('terryma/vim-multiple-cursors', {'type': 'opt'})
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})
@@ -60,6 +60,8 @@ call minpac#add('inkarkat/vim-ingo-library', {'type': 'opt'})
 call minpac#add('vimwiki/vimwiki', {'type': 'opt'})
 call minpac#add('vim-scripts/DrawIt', {'type': 'opt'})
 call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
+call minpac#add('w0rp/ale', {'type': 'opt'})
+
 
 if has("gui_running")
 	colorscheme office-light

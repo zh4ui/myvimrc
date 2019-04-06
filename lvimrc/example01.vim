@@ -12,7 +12,7 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 " fuf
-let g:fuf_coveragefile_globPatterns = ['src/**/*', 'include/**/*',  'test/**/*', 'docs/**/*', 'muggle/**/*']
+let g:fuf_coveragefile_globPatterns = ['src/**/*', 'include/**/*',  'test/**/*', 'docs/**/*', 'muggle/**/*', 'fbs/**/*']
 
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 400
@@ -113,6 +113,6 @@ let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
 " https://stackoverflow.com/questions/5074191/vim-fold-top-level-folds-only
-set foldnestmax=1
+set foldnestmax=2
 
 " vim: ts=2 sw=2 expandtab

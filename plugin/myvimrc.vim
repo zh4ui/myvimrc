@@ -11,7 +11,9 @@ set nobackup
 
 " shortcuts
 nnoremap <silent> <C-J> gT
+nnoremap <silent> g<C-J> :-tabmove<cr>
 nnoremap <silent> <C-K> gt
+nnoremap <silent> g<C-K> :+tabmove<cr>
 
 set switchbuf=usetab,newtab
 
@@ -63,6 +65,11 @@ au FileType xml setlocal foldmethod=syntax foldopen-=block
 " https://stackoverflow.com/questions/178257/how-to-avoid-syntax-highlighting-for-large-files-in-vim
 autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
 
+set cmdwinheight=5
+
 " http://vim.wikia.com/wiki/Search_for_visually_selected_text
-vnoremap // y`<h/\V<C-r>=escape(@",'/\')<CR><CR>gv
+" vnoremap // y`<h/\V<C-r>=escape(@",'/\')<CR><CR>gv
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>gv
+vnoremap /0 yq:i%s/\V<C-r>"/<C-r>"<C-f><esc>
+
 
