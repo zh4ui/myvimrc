@@ -62,6 +62,7 @@ call minpac#add('vimwiki/vimwiki', {'type': 'opt'})
 call minpac#add('vim-scripts/DrawIt', {'type': 'opt'})
 call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
 call minpac#add('w0rp/ale', {'type': 'opt'})
+call minpac#add('pseewald/vim-anyfold', {'type': 'opt'})
 
 
 if has("gui_running")

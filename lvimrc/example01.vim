@@ -128,8 +128,10 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 set foldnestmax=2
 
 
+" https://stackoverflow.com/questions/890802/how-do-i-disable-the-press-enter-or-type-command-to-continue-prompt-in-vim
+" https://vim.fandom.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
 " make the current file to object
-nn \b0 :exec 'make -C ./build ' . expand('%:.:r') . '.o'<cr>
+nn \b0 :exec 'make -C ./build ' . expand('%:.:r') . '.o'<cr><cr>
 
 packadd vim-flatbuffers
 
@@ -160,7 +162,15 @@ nn \fn :call QfFixNamingError()<cr>
 " Note: Normally, :cwindow jumps to the quickfix window if the command opens it
 " (but not if it's already open). However, as part of the autocmd, this doesn't
 " seem to happen.
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
+autocmd QuickFixCmdPost [^l]* nested cwindow 4
+autocmd QuickFixCmdPost    l* nested lwindow 4
+
+" https://vi.stackexchange.com/questions/2843/how-to-automatically-set-wrapping-for-quickfix-window
+augroup quickfix
+    autocmd!
+    autocmd FileType qf setlocal wrap
+augroup END
+
+packadd vim-anyfold
 
 " vim: ts=2 sw=2 expandtab
