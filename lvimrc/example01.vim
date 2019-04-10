@@ -173,4 +173,6 @@ augroup END
 
 packadd vim-anyfold
 
+nnoremap <leader>f0 :g/^{/normal zfa{<cr>
+
 " vim: ts=2 sw=2 expandtab
