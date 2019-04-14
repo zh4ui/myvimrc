@@ -131,7 +131,7 @@ set foldnestmax=2
 " https://stackoverflow.com/questions/890802/how-do-i-disable-the-press-enter-or-type-command-to-continue-prompt-in-vim
 " https://vim.fandom.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
 " make the current file to object
-nn \b0 :exec 'make -C ./build ' . expand('%:.:r') . '.o'<cr><cr>
+nn \0 :exec 'make -C ./build ' . expand('%:.:r') . '.o'<cr><cr>
 
 packadd vim-flatbuffers
 

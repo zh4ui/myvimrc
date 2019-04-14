@@ -11,9 +11,9 @@ set nobackup
 
 " shortcuts
 nnoremap <silent> <C-J> gT
-nnoremap <silent> g<C-J> :-tabmove<cr>
+nnoremap <silent> <C-G><C-J> :-tabmove<cr>
 nnoremap <silent> <C-K> gt
-nnoremap <silent> g<C-K> :+tabmove<cr>
+nnoremap <silent> <C-G><C-K> :+tabmove<cr>
 
 set switchbuf=usetab,newtab
 
