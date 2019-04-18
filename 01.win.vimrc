@@ -6,8 +6,6 @@ if exists('*minpac#init')
   packadd bufexplorer
 endif
 
-" TODO:: check if it's on a fold
-nnoremap <CR> zo
 nnoremap - zc
 
 augroup filetypedetect
