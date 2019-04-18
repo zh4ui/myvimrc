@@ -54,4 +54,4 @@ call minpac#add('nightsense/office', {'type': 'opt'})
 call minpac#add('dracula/vim', {'name': 'dracula', 'type': 'opt'})
 call minpac#add('chriskempson/base16-vim', {'type': 'opt'})
 
-" vim: ts=2 sw=2 expandtab
+" vim: ts=2 sw=2 expandtab ff=unix

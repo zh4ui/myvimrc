@@ -66,35 +66,35 @@ noremap <leader>cr :py3f ~/.vim/clang/clang-rename.py<cr>
 set autoread
 
 " https://jonasdevlieghere.com/vim-lsp-clangd/
-if executable('clangd')
-  augroup lsp_clangd
-    autocmd!
-    autocmd User lsp_setup call lsp#register_server({
-          \ 'name': 'clangd',
-          \ 'cmd': {server_info->['clangd']},
-          \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-          \ })
-    autocmd FileType c setlocal omnifunc=lsp#complete
-    autocmd FileType cpp setlocal omnifunc=lsp#complete
-    autocmd FileType objc setlocal omnifunc=lsp#complete
-    autocmd FileType objcpp setlocal omnifunc=lsp#complete
-  augroup end
-endif
+"if executable('clangd')
+"  augroup lsp_clangd
+"    autocmd!
+"    autocmd User lsp_setup call lsp#register_server({
+"          \ 'name': 'clangd',
+"          \ 'cmd': {server_info->['clangd']},
+"          \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+"          \ })
+"    autocmd FileType c setlocal omnifunc=lsp#complete
+"    autocmd FileType cpp setlocal omnifunc=lsp#complete
+"    autocmd FileType objc setlocal omnifunc=lsp#complete
+"    autocmd FileType objcpp setlocal omnifunc=lsp#complete
+"  augroup end
+"endif
 
 let g:lsp_diagnostics_enabled = 0
 let g:lsp_signs_enabled = 0
 
-" https://github.com/MaskRay/ccls/wiki/vim-lsp
-" Register ccls C++ lanuage server.
-" if executable('ccls')
-"    au User lsp_setup call lsp#register_server({
-"       \ 'name': 'ccls',
-"       \ 'cmd': {server_info->['ccls']},
-"       \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
-"       \ 'initialization_options': { 'cacheDirectory': '/tmp/ccls/cache' },
-"       \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
-"       \ })
-" endif
+"https://github.com/MaskRay/ccls/wiki/vim-lsp
+"Register ccls C++ lanuage server.
+if executable('ccls')
+   au User lsp_setup call lsp#register_server({
+      \ 'name': 'ccls',
+      \ 'cmd': {server_info->['ccls']},
+      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+      \ 'initialization_options': { 'cacheDirectory': '/tmp/ccls/cache' },
+      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+      \ })
+endif
 
 " Key bindings for vim-lsp.
 nn <silent> <M-d> :LspDefinition<cr>
@@ -173,6 +173,15 @@ augroup END
 
 packadd vim-anyfold
 
+"packadd ale
+"
+"" Write this in your vimrc file
+"let g:ale_lint_on_text_changed = 'never'
+"" You can disable this option too
+"" if you don't want linters to run on opening a file
+"let g:ale_lint_on_enter = 0
+
 nnoremap <leader>f0 :g/^{/normal zfa{<cr>
+
 
 " vim: ts=2 sw=2 expandtab
