@@ -1,6 +1,7 @@
 
 runtime vimrc_example.vim
 
+let mapleader = "\<space>"
 let s:extra_config = join([expand('<sfile>:p:h'), 'extra.vim'], '/')
 if filereadable(s:extra_config)
   exec "source " . s:extra_config
