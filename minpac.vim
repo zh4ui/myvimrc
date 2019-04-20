@@ -29,7 +29,6 @@ call minpac#add('junegunn/goyo.vim', {'type': 'opt'})
 call minpac#add('keith/swift.vim', {'type': 'opt'})
 call minpac#add('kergoth/vim-bitbake', {'type': 'opt'})
 call minpac#add('leafgarland/typescript-vim', {'type': 'opt'})
-call minpac#add('neoclide/coc.nvim', {'type': 'opt'})
 call minpac#add('pseewald/vim-anyfold', {'type': 'opt'})
 call minpac#add('reedes/vim-pencil', {'type': 'opt'})
 call minpac#add('skywind3000/asyncrun.vim', {'type': 'opt'})
@@ -38,12 +37,16 @@ call minpac#add('tpope/vim-dispatch', {'type': 'opt'})
 call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
 call minpac#add('tpope/vim-ragtag', {'type': 'opt'})
 call minpac#add('uplus/vim-clang-rename', {'type': 'opt'})
-call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
 call minpac#add('vim-scripts/DrawIt', {'type': 'opt'})
 call minpac#add('vim-scripts/FuzzyFinder', {'type': 'opt'})
 call minpac#add('vimwiki/vimwiki', {'type': 'opt'})
-"call minpac#add('w0rp/ale', {'type': 'opt'})
 call minpac#add('zchee/vim-flatbuffers', {'type': 'opt'})
+
+" frozen
+
+call minpac#add('w0rp/ale', {'type': 'opt', 'frozen': 1})
+call minpac#add('vim-airline/vim-airline', {'type': 'opt', 'frozen': 1})
+call minpac#add('neoclide/coc.nvim', {'type': 'opt', 'frozen': 1})
 
 call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
 

@@ -183,5 +183,7 @@ packadd vim-anyfold
 
 nnoremap <leader>f0 :g/^{/normal zfa{<cr>
 
+"let g:lsp_log_verbose = 1
+"let g:lsp_log_file = expand('./vim-lsp.log')
 
 " vim: ts=2 sw=2 expandtab
