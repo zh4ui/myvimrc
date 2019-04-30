@@ -12,7 +12,8 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 " fuf
-let g:fuf_coveragefile_globPatterns = ['src/**/*', 'include/**/*',  'test/**/*', 'docs/**/*', 'muggle/**/*', 'fbs/**/*']
+let g:fuf_coveragefile_globPatterns = ['src/**/*', 'include/**/*', 
+  \ 'test/**/*', 'docs/**/*', 'muggle/**/*', 'fbs/**/*']
 
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 400
@@ -59,7 +60,7 @@ nnoremap <silent> se     :FufEditDataFile<CR>
 nnoremap <silent> sr     :FufRenewCache<CR>
 
 nnoremap <silent> <C-P>	:FufCoverageFile<CR>
-nnoremap <silent> <C-H> :exec 'FufCoverageFile ' . expand('%:t:r')<CR>
+nnoremap <silent> <C-H> :exec 'FufCoverageFile ' . expand('%:t:r') . '.'<CR>
 
 noremap <leader>cr :py3f ~/.vim/clang/clang-rename.py<cr>
 
@@ -138,8 +139,8 @@ packadd vim-flatbuffers
 function! QfFixNamingError()
   let cursor = getqflist({'idx': 0}).idx - 1
   let qflist = getqflist()
-  let errmsg =  qflist[cursor].text
-  let matchresult =  matchlist(errmsg, '.*''\(\w\+\)''.*; did you mean ''\(\w\+\)''?')
+  let errmsg = qflist[cursor].text
+  let matchresult = matchlist(errmsg, '.*''\(\w\+\)'' does not.*did you mean ''\(\w\+\)''?')
   if len(matchresult) > 0
     let wrong = matchresult[1]
     let right = matchresult[2]
@@ -182,6 +183,15 @@ packadd vim-anyfold
 "let g:ale_lint_on_enter = 0
 
 nnoremap <leader>f0 :g/^{/normal zfa{<cr>
+nnoremap K k
+
+packadd vim-clang-format
+packadd vim-cpp-enhanced-highlight
+packadd L9
+packadd FuzzyFinder
+packadd async.vim
+packadd vim-lsp
+packadd VimCompletesMe
 
 "let g:lsp_log_verbose = 1
 "let g:lsp_log_file = expand('./vim-lsp.log')
