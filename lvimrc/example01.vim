@@ -1,6 +1,7 @@
 
 set noautochdir
 
+
 " plugin clang-format
 let g:clang_format#code_style='file'
 " map to <Leader>cf in C++ code
@@ -84,6 +85,10 @@ set autoread
 
 let g:lsp_diagnostics_enabled = 0
 let g:lsp_signs_enabled = 0
+let g:lsp_highlight_references_enabled = 0
+
+"let g:lsp_log_verbose = 1
+"let g:lsp_log_file = expand('./vim-lsp.log')
 
 "https://github.com/MaskRay/ccls/wiki/vim-lsp
 "Register ccls C++ lanuage server.
@@ -193,7 +198,8 @@ packadd async.vim
 packadd vim-lsp
 packadd VimCompletesMe
 
-"let g:lsp_log_verbose = 1
-"let g:lsp_log_file = expand('./vim-lsp.log')
+let base16colorspace=256
+packadd base16-vim
+
 
 " vim: ts=2 sw=2 expandtab

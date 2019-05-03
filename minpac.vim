@@ -57,6 +57,8 @@ call minpac#add('zchee/vim-flatbuffers', {'type': 'opt'})
 call minpac#add('nightsense/office', {'type': 'opt'})
 call minpac#add('dracula/vim', {'name': 'dracula', 'type': 'opt'})
 call minpac#add('chriskempson/base16-vim', {'type': 'opt'})
+call minpac#add('andreypopp/vim-colors-plain', {'type': 'opt'})
+
 
 " frozen
 
