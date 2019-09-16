@@ -1,9 +1,13 @@
 
+let mapleader = "\<space>"
+
 runtime minpac.vim
 
 if exists('*minpac#init')
   packadd lightline.vim
   packadd bufexplorer
+  packadd vim-ingo-library
+  packadd vim-mark
 endif
 
 nnoremap - zc

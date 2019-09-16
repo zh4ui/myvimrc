@@ -48,6 +48,8 @@ call minpac#add('uplus/vim-clang-rename', {'type': 'opt'})
 call minpac#add('vim-scripts/DrawIt', {'type': 'opt'})
 call minpac#add('vimwiki/vimwiki', {'type': 'opt'})
 call minpac#add('zchee/vim-flatbuffers', {'type': 'opt'})
+call minpac#add('inkarkat/vim-ingo-library', {'type': 'opt'})
+call minpac#add('inkarkat/vim-mark', {'type': 'opt'})
 
 " colorschema
 
@@ -70,7 +72,5 @@ call minpac#add('neoclide/coc.nvim', {'type': 'opt', 'frozen': 1})
 " removed
 
 "call minpac#add('zh4ui/myvimrc')
-"call minpac#add('inkarkat/vim-ingo-library', {'type': 'opt'})
-"call minpac#add('inkarkat/vim-mark', {'type': 'opt'})
 
 " vim: ts=2 sw=2 expandtab ff=unix
